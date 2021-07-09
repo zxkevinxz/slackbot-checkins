@@ -24,22 +24,6 @@ slackEvents.on('app_mention', (event) => {
     })();
 })
 
-// slackEvents.on('message.im', (event) => {
-//     console.log(`Got message from user ${event.user}: ${event.text}`);
-//     console.log(event);
-//     console.log(slackClient);
-//     (async () => {
-//         try {
-//             await slackClient.chat.postMessage({
-//                 channel: event.channel,
-//                 text: `HIIIII <@${event.user}>! :tada:`,
-//             })
-//         } catch (error) {
-//             console.log(error.data);
-//         }
-//     })
-// })
-
 slackEvents.on('error', console.error);
 
 slackEvents.start(slackPort).then(() => {
