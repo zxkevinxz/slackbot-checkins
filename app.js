@@ -5,7 +5,7 @@ import { launchSettings, launchCheckIn } from './slackBotFunctions.js';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/settings', (req, res) => {
   console.log(req.body);
