@@ -1,0 +1,180 @@
+{
+  "type": "view_submission",
+  "team": { "id": "T026Z2BCQNT", "domain": "lilysplayspace" },
+  "user": {
+    "id": "U027SDJHM4Z",
+    "username": "kevinpettinger",
+    "name": "kevinpettinger",
+    "team_id": "T026Z2BCQNT"
+  },
+  "api_app_id": "A027E6VQ51R",
+  "token": "lTzjdFvejAbH7rpXTarlvJEf",
+  "trigger_id": "2275868883378.2237079432775.43741aff3b2da6b42e7c22b2ba2f93d3",
+  "view": {
+    "id": "V027P497V5M",
+    "team_id": "T026Z2BCQNT",
+    "type": "modal",
+    "blocks": [
+      {
+        "type": "input",
+        "block_id": "settings-days",
+        "label": {
+          "type": "plain_text",
+          "text": "Check-in Schedule",
+          "emoji": true
+        },
+        "optional": false,
+        "dispatch_action": false,
+        "element": {
+          "type": "checkboxes",
+          "action_id": "checkboxes-action",
+          "options": [
+            {
+              "text": { "type": "plain_text", "text": "Monday", "emoji": true },
+              "value": "MONDAY"
+            },
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "Tuesday",
+                "emoji": true
+              },
+              "value": "TUESDAY"
+            },
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "Wednesday",
+                "emoji": true
+              },
+              "value": "WEDNESDAY"
+            },
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "Thursday",
+                "emoji": true
+              },
+              "value": "Thursday"
+            },
+            {
+              "text": { "type": "plain_text", "text": "Friday", "emoji": true },
+              "value": "FRIDAY"
+            },
+            {
+              "text": {
+                "type": "plain_text",
+                "text": "Saturday",
+                "emoji": true
+              },
+              "value": "SATURDAY"
+            },
+            {
+              "text": { "type": "plain_text", "text": "Sunday", "emoji": true },
+              "value": "SUNDAY"
+            }
+          ]
+        }
+      },
+      {
+        "type": "section",
+        "block_id": "settings-time",
+        "text": {
+          "type": "plain_text",
+          "text": "Reminder time",
+          "emoji": true
+        },
+        "accessory": {
+          "type": "timepicker",
+          "action_id": "timepicker-action",
+          "initial_time": "12:00",
+          "placeholder": {
+            "type": "plain_text",
+            "text": "Select time",
+            "emoji": true
+          }
+        }
+      },
+      {
+        "type": "input",
+        "block_id": "settings-users",
+        "label": {
+          "type": "plain_text",
+          "text": "Who to remind",
+          "emoji": true
+        },
+        "optional": false,
+        "dispatch_action": false,
+        "element": {
+          "type": "multi_users_select",
+          "action_id": "multi_users_select-action",
+          "placeholder": {
+            "type": "plain_text",
+            "text": "Select users",
+            "emoji": true
+          }
+        }
+      }
+    ],
+    "private_metadata": "",
+    "callback_id": "modal-settings",
+    "state": {
+      "values": {
+        "settings-days": {
+          "checkboxes-action": {
+            "type": "checkboxes",
+            "selected_options": [
+              {
+                "text": {
+                  "type": "plain_text",
+                  "text": "Sunday",
+                  "emoji": true
+                },
+                "value": "SUNDAY"
+              },
+              {
+                "text": {
+                  "type": "plain_text",
+                  "text": "Monday",
+                  "emoji": true
+                },
+                "value": "MONDAY"
+              }
+            ]
+          }
+        },
+        "settings-time": {
+          "timepicker-action": {
+            "type": "timepicker",
+            "selected_time": "02:00"
+          }
+        },
+        "settings-users": {
+          "multi_users_select-action": {
+            "type": "multi_users_select",
+            "selected_users": ["U027Q0TRXT6"]
+          }
+        }
+      }
+    },
+    "hash": "1626300771.Oci6R5IC",
+    "title": {
+      "type": "plain_text",
+      "text": "Check-in Settings",
+      "emoji": true
+    },
+    "clear_on_close": false,
+    "notify_on_close": false,
+    "close": null,
+    "submit": { "type": "plain_text", "text": "Submit", "emoji": true },
+    "previous_view_id": null,
+    "root_view_id": "V027P497V5M",
+    "app_id": "A027E6VQ51R",
+    "external_id": "",
+    "app_installed_team_id": "T026Z2BCQNT",
+    "bot_id": "B027EA41UFM"
+  },
+  "response_urls": [],
+  "is_enterprise_install": false,
+  "enterprise": null
+}

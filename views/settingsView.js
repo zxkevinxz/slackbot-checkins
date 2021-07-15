@@ -1,31 +1,123 @@
 const settingsView = {
   "type": "modal",
+  "callback_id": "modal-settings",
   "title": {
     "type": "plain_text",
-    "text": "My App"
+    "text": "Check-in Settings"
   },
-  "close": {
+  "submit": {
     "type": "plain_text",
-    "text": "Close"
+    "text": "Submit"
   },
   "blocks": [
     {
-      "type": "section",
-      "text": {
-        "type": "mrkdwn",
-        "text": "About the simplest modal you could conceive of :smile:\n\nMaybe <https://api.slack.com/reference/block-kit/interactive-components|*make the modal interactive*> or <https://api.slack.com/surfaces/modals/using#modifying|*learn more advanced modal use cases*>."
+      "type": "input",
+      "block_id": "settings-days",
+      "element": {
+        "type": "checkboxes",
+        "options": [
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Monday",
+              "emoji": true
+            },
+            "value": "MONDAY"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Tuesday",
+              "emoji": true
+            },
+            "value": "TUESDAY"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Wednesday",
+              "emoji": true
+            },
+            "value": "WEDNESDAY"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Thursday",
+              "emoji": true
+            },
+            "value": "Thursday"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Friday",
+              "emoji": true
+            },
+            "value": "FRIDAY"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Saturday",
+              "emoji": true
+            },
+            "value": "SATURDAY"
+          },
+          {
+            "text": {
+              "type": "plain_text",
+              "text": "Sunday",
+              "emoji": true
+            },
+            "value": "SUNDAY"
+          }
+        ],
+        "action_id": "checkboxes-action"
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "Check-in Schedule",
+        "emoji": true
       }
     },
     {
-      "type": "context",
-      "elements": [
-        {
-          "type": "mrkdwn",
-          "text": "Psssst this modal was designed using <https://api.slack.com/tools/block-kit-builder|*Block Kit Builder*>"
-        }
-      ]
+      "type": "section",
+      "block_id": "settings-time",
+      "text": {
+        "type": "plain_text",
+        "text": "Reminder time"
+      },
+      "accessory": {
+        "type": "timepicker",
+        "initial_time": "12:00",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select time",
+          "emoji": true
+        },
+        "action_id": "timepicker-action"
+      }
+    },
+    {
+      "type": "input",
+      "block_id": "settings-users",
+      "element": {
+        "type": "multi_users_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select users",
+          "emoji": true
+        },
+        "action_id": "multi_users_select-action"
+      },
+      "label": {
+        "type": "plain_text",
+        "text": "Who to remind",
+        "emoji": true
+      }
     }
-  ]
+  ],
 }
 
 export default settingsView;
