@@ -1,4 +1,4 @@
-const settingsView = {
+const settingsSchedule = {
   "type": "modal",
   "callback_id": "modal-settings",
   "title": {
@@ -7,7 +7,7 @@ const settingsView = {
   },
   "submit": {
     "type": "plain_text",
-    "text": "Submit"
+    "text": "Next"
   },
   "blocks": [
     {
@@ -120,4 +120,4 @@ const settingsView = {
   ],
 }
 
-export default settingsView;
+export default settingsSchedule;
